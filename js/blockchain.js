@@ -6,6 +6,22 @@ var BLOCKCHAIN = new function () {
     this.tx_fetch(url + address, callback);
   }
   
+  this.retrieveAllBalances = function(addresses, callback) {
+		
+    var url = 'http://blockr.io/api/v1/address/balance/';
+		
+		var first = true;
+    for(i = 0; i < addresses.length; i++) {
+			if(! first) {
+				url += ',';
+			}
+			first = false;
+			url = url + addresses[i];
+		}
+		
+    this.tx_fetch(url, callback);
+  }
+  
   this.getUnspentOutputs = function(address, callback) {
 
       var url = 'http://blockchain.info/unspent?address=' + address;

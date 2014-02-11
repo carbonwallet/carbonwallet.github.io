@@ -115,7 +115,6 @@ $(document).ready(function() {
       var addr = WALLET.getKeys()[i].getBitcoinAddress().toString();
       $('#address' + i).text(addr); 
       $("#txDropAddr").append('<option value=' + i + '>' + addr + '</option>'); 
-      $('#balance' + i).text(Bitcoin.Util.formatValue(WALLET.getBalances()[i])); 
       var qrcode = makeQRCode(addr);
       $('#qrcode' + i).popover({ title: 'QRCode', html: true, content: qrcode, placement: 'bottom' });
     }

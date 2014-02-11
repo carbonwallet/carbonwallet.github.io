@@ -1,7 +1,6 @@
 var WALLET = new function ()
 {
   this.keys = [];
-  this.balances = [0,0,0,0,0,0,0,0,0,0];
   
   // Methods
   this.textToBytes = function(text) {
@@ -12,28 +11,22 @@ var WALLET = new function ()
     return this.keys;
   };
   
-  this.getBalances = function() {
-    return this.balances;
-  }
-  
-  this.createBalanceFunction = function(i) {
-      return function(text) { 
-        WALLET.getBalances()[i] = parseInt(text);
-        
-        // TODO, disconnect GUI code from backend.
-        $('#balance' + i).text(
-          Bitcoin.Util.formatValue(WALLET.getBalances()[i]));           
-      };
-  }
-  
   this.updateAllBalances = function() {
     
-    var funcs = [];
+    var addresses = [];
     
     for(i = 0; i < this.getKeys().length; i++)
     {
-      funcs[i] = this.createBalanceFunction(i);
-      BLOCKCHAIN.retrieveBalance(this.getKeys()[i].getBitcoinAddress().toString(), funcs[i]); 
+      addresses[i] = this.getKeys()[i].getBitcoinAddress().toString();
     }
-  }
+		
+    BLOCKCHAIN.retrieveAllBalances(addresses, function(json) {
+			obj = JSON.parse(json);
+			for(i = 0; i < obj["data"].length; i++) {
+				var bal = obj["data"][i]["balance"];
+        $('#balance' + i).text(bal);  
+			}
+    }); 
+  };
+	
 }
