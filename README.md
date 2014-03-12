@@ -24,6 +24,16 @@ without having to go through the Chrome Web store:
 - Navigate to the carbonwallet.github.io directory and click OK
 - Carbon Wallet will now appear as an option in your App list in Chrome
 
+
+
+### Executables
+
+Build carbonwallet on windows, mac and linux
+
+- npm install grunt-node-webkit-builder --save-dev
+- npm install -g grunt-cli
+- grunt
+
 ### Licence
 
 http://opensource.org/licenses/CDDL-1.0
