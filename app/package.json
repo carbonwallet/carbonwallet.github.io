@@ -6,7 +6,7 @@
   "window": {
     "title": "Carbon Wallet",
     "toolbar": false,
-    "frame": false,
+    "frame": true,
     "width": 962,
     "height": 600,
     "min_width": 962,
