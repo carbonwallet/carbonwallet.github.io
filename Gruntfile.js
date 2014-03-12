@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         linux32: false,
         linux64: false,
       },
-      src: './**/*' // Your node-webkit app
+      src: './app/**' // Your node-webkit app
     },
   });
 

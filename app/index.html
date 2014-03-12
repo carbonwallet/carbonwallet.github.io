@@ -10,49 +10,45 @@
     <!-- If I have seen further it is by standing on the shoulders of giants. -->
     
     <!-- Style sheets -->
-    <link href="app/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="app/css/font-awesome.css" rel="stylesheet">
-    <link href="app/css/default.css" rel="stylesheet">
-    <link href="app/css/packaged-app.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/default.css" rel="stylesheet">
+    <link href="css/packaged-app.css" rel="stylesheet">
     
     <!-- The following libraries are required for bitcon addresses and signing. -->
-    <script src="app/extjs/bitcoin/crypto.js"></script> 
-    <script src="app/extjs/bitcoin/sha256.js"></script> 
-    <script src="app/extjs/bitcoin/ripemd160.js"></script> 
-    <script src="app/extjs/bitcoin/jsbn.js"></script> 
-    <script src="app/extjs/bitcoin/jsbn2.js"></script> 
-    <script src="app/extjs/bitcoin/bitcoin.js"></script> 
-    <script src="app/extjs/bitcoin/util.js"></script> 
-    <script src="app/extjs/bitcoin/ec.js"></script> 
-    <script src="app/extjs/bitcoin/sec.js"></script> 
-    <script src="app/extjs/bitcoin/prng4.js"></script> 
-    <script src="app/extjs/bitcoin/rng.js"></script> 
-    <script src="app/extjs/bitcoin/ecdsa.js"></script> 
-    <script src="app/extjs/bitcoin/eckey.js"></script> 
-    <script src="app/extjs/bitcoin/base58.js"></script> 
-    <script src="app/extjs/bitcoin/address.js"></script> 
-    <script src="app/extjs/bitcoin/opcode.js"></script> 
-    <script src="app/extjs/bitcoin/script.js"></script> 
-    <script src="app/extjs/bitcoin/transaction.js"></script> 
+    <script src="extjs/bitcoin/crypto.js"></script> 
+    <script src="extjs/bitcoin/sha256.js"></script> 
+    <script src="extjs/bitcoin/ripemd160.js"></script> 
+    <script src="extjs/bitcoin/jsbn.js"></script> 
+    <script src="extjs/bitcoin/jsbn2.js"></script> 
+    <script src="extjs/bitcoin/bitcoin.js"></script> 
+    <script src="extjs/bitcoin/util.js"></script> 
+    <script src="extjs/bitcoin/ec.js"></script> 
+    <script src="extjs/bitcoin/sec.js"></script> 
+    <script src="extjs/bitcoin/prng4.js"></script> 
+    <script src="extjs/bitcoin/rng.js"></script> 
+    <script src="extjs/bitcoin/ecdsa.js"></script> 
+    <script src="extjs/bitcoin/eckey.js"></script> 
+    <script src="extjs/bitcoin/base58.js"></script> 
+    <script src="extjs/bitcoin/address.js"></script> 
+    <script src="extjs/bitcoin/opcode.js"></script> 
+    <script src="extjs/bitcoin/script.js"></script> 
+    <script src="extjs/bitcoin/transaction.js"></script> 
     
     <!-- JQuery and bootstrap. -->
-    <script src="app/extjs/jquery-1.9.1.js"></script> 
-    <script src="app/extjs/bootstrap-collapse.js"></script> 
-    <script src="app/extjs/bootstrap-transition.js"></script> 
-    <script src="app/extjs/bootstrap-modal.js"></script> 
-    <script src="app/extjs/bootstrap-tooltip.js"></script> 
-    <script src="app/extjs/bootstrap-popover.js"></script> 
+    <script src="extjs/jquery-1.9.1.js"></script> 
+    <script src="extjs/bootstrap.js"></script> 
     
     <!-- Other external libraries. -->
-    <script src="app/extjs/qrcode.js"></script> 
-    <script src="app/extjs/mnemonic.js"></script> 
-    <script src="app/extjs/electrum.js"></script> 
+    <script src="extjs/qrcode.js"></script> 
+    <script src="extjs/mnemonic.js"></script> 
+    <script src="extjs/electrum.js"></script> 
     
     <!-- JavaScript created specifically for CarbonWallet. -->
-    <script src="app/js/tx.js"></script> 
-    <script src="app/js/blockchain.js"></script> 
-    <script src="app/js/wallet.js"></script> 
-    <script src="app/js/carbonwallet.js"></script> 
+    <script src="js/tx.js"></script> 
+    <script src="js/blockchain.js"></script> 
+    <script src="js/wallet.js"></script> 
+    <script src="js/carbonwallet.js"></script> 
     <link href="favicon.png" rel="icon" type="image/png">
   </head>
   <body>
@@ -116,134 +112,7 @@
           <h2>We don't store your Bitcoins locally or on our servers.</h2>
         </div>
         
-        <div class="container">
-          <h3 class="sales-title">Why should I use CarbonWallet ?</h3>
-          <h4 class="sales-subtitle">We're a very secure online wallet with low payment fees (0.0005 BTC). Read on...</h4>
-          <div class="row">
-            <div class="span4">
-              <h4><i class="icon-ok-sign"></i> We are determined.</h4>
-              <p>CarbonWallet is an online <a href="https://en.bitcoin.it/wiki/Deterministic_wallet">deterministic wallet</a>. 
-              Your passphrase is turned into a number which is then turned into Bitcoin Addresses. 
-              </p>
-              
-              <p>Your passphrase is your wallet access and wallet backup.</p> 
-            </div>
-            <div class="span4">
-              <h4><i class="icon-ok-sign"></i> We are a zero footprint wallet.</h4>
-              <p>
-                We don't store your Bitcoins locally or on our servers, only in your browser memory. 
-                No trace is left on your device once you logout of your session.</p> 
-              <p> 
-              Thiefs have fewer angles of attack with CarbonWallet.
-              </p>
-            </div>
-            <div class="span4">
-              <h4><i class="icon-ok-sign"></i> We support online or cold storage.</h4>
-              <p>Need to store large sums of Bitcoins ? CarbonWallet supports 
-              <a href="https://en.bitcoin.it/wiki/Cold_storage">Cold Storage</a>.</p> 
-              <p>  
-              You can use CarbonWallet online or offline on a computer you know is clean and safe. 
-              <i class="icon-download"></i> 
-              <a href="https://github.com/carbonwallet/carbonwallet.github.io/archive/master.zip">Download CarbonWallet</a>
-              </p>
-            </div>
-          </div>
           
-          <hr />
-          <h3 class="sales-title">We will do everything we can to protect your Bitcoins.</h3>
-          <h4 class="sales-subtitle">However you also need to take responsibility and follow these guidelines.</h4>
-          <div class="row">
-            <div class="span4">
-              <h4><i class="icon-ban-circle"></i> Never give out your passphrase.</h4>
-              <p>There are several ways thiefs will try and get your passphrase. 
-              These attacks apply to all Bitcoin wallets so read up and be safe.
-              </p>
-              <ol>
-                <li>
-                  <a href="http://en.wikipedia.org/wiki/Phishing">Phishing</a>
-                  Always make sure you are on the carbonwallet.com address and never click links in emails.
-                </li>
-                <li>
-                  <a href="http://en.wikipedia.org/wiki/Social_engineering_(security)">Social engineering</a>
-                  Be very careful about what you install on the devices you own.
-                </li>
-                <li>
-                  Watch out for <a href="http://en.wikipedia.org/wiki/Malware">Malware</a>
-                  including <a href="http://en.wikipedia.org/wiki/Keystroke_logging">Keyloggers</a>
-                  or malicious software often disguised as a genuine piece of software.
-                </li>
-              </ol>
-            </div>
-            <div class="span4">
-              <h4><i class="icon-ban-circle"></i> Consider multiple passphrases.</h4>
-              <p>Think about passphrases the way you keep money in real life, 
-              not all in one place. For example.</p>
-
-              <ul>
-                <li><span class="label label-info">A day to day passphrase</span>. 
-                You could store a small amount of 
-                Bitcoins here so you don't lose all your Bitcoins if it is compromised. 
-                Write the passphrase down and carry it in your wallet.</li>
-
-                <li><span class="label label-info">A Bank account style passphrase</span>. One that you only use in a safe environment, 
-                i.e. a computer with good virus protection. Hold moderate amounts of Bitcoins here.</li>
-
-                <li><span class="label label-info">A savings passphrase</span>. A passphrase you created in cold storage. 
-                Be very careful when you use this password.</li>
-              </ul>
-            </div>
-            <div class="span4">
-              <h4><i class="icon-ban-circle"></i> Never lose your passphrases.</h4>
-              <p><span class="label label-important">Without the passphrase your coins are gone</span>. 
-              There is no way to retrieve CarbonWallet wallets 
-              without the passphrase.</p> 
-              <p>The best way to keep passphrases safe is... </p> 
-              
-              <ul>
-                <li>Write them down</li>
-                <li>keep them somewhere secure.</li> 
-              </ul>
-              <p><img src="images/written.jpg" alt="Write it down." class="img-polaroid"></p>
-            </div>
-            
-          </div>
-          
-          <hr />
-          <h3 class="sales-title">More Technical Details.</h3>
-          <h4 class="sales-subtitle">We are using the latest in open repositories and best practices to stay secure.</h4>
-          <div class="row">
-            <div class="span4">
-              <h4><i class="icon-key"></i> We are using 128bit passphrases.</h4>
-              <p>According to "<a href="http://www.grc.com/haystack.htm">how big is your haystack?</a>" Our passphrases would take 
-              <em>trillions of 
-               centuries</em> to break under a massive cracking scenario. </p>
-              <p>We are using 
-              <a href="https://developer.mozilla.org/en/docs/DOM/window.crypto.getRandomValues">
-              window.crypto.getRandomValues</a> whenever available for cryptographically random values.</p>
-              <p>Our passphrases are compatible with the 
-              <a href="http://electrum.org/">Electrum Bitcoin client</a>
-              and <a href="http://brainwallet.org/#chains">Brainwallet.org</a>.</p>
-            </div>
-            <div class="span4">
-              <h4><i class="icon-random"></i> We generate bitcoin addresses deterministically.</h4>
-              <p>
-                Your passphrase is turned into a 128bit key which is then stretched into 10 bitcoin addresses. 
-                There is no limit but for now 10 per passphrase should be adequate.</p>
-                
-              <p>Determined Bitcoin addresses mean no need for a remote server to hold keys and no need
-              to store keys on a local hard drive.</p>
-            </div>
-            <div class="span4">
-              <h4><i class="icon-user"></i> CarbonWallet is open and public domain.</h4>
-              <p>
-              All source code is available on Github and the site is a Github page. </p>
-              <p>All commits and changes are open for peer review and the site is deployed 
-              directly from the repository.</p>
-              <p><strong>Extra security through open source code.</strong></p>
-              <p>All JavaScript is unminimized for easier inspection.</p>
-            </div>
-          </div>
-        </div>
         
       </div>
     <!-- My Addresses -->
