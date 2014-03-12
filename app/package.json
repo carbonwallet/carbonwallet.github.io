@@ -1,7 +1,7 @@
 {
   "name": "carbonwallet",
   "version": "1.0",
-  "main": "app://host/index.html",
+  "main": "app://host/login.html",
   "description": "CarbonWallet is an online deterministic wallet.",
   "window": {
     "title": "Carbon Wallet",
