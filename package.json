@@ -1,0 +1,20 @@
+{
+  "name": "carbonwallet",
+  "version": "1.0",
+  "main": "app://host/index.html",
+  "description": "CarbonWallet is an online deterministic wallet.",
+  "window": {
+    "title": "Carbon Wallet",
+    "toolbar": false,
+    "frame": false,
+    "width": 962,
+    "height": 600,
+    "min_width": 962,
+    "min_height": 600,
+    "resizable": true
+  },
+  "devDependencies": {
+    "grunt": "^0.4.3",
+    "grunt-node-webkit-builder": "^0.1.17"
+  }
+}
