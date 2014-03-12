@@ -4,12 +4,12 @@
   "version": "0.1.1",
   "app": {
     "background": {
-      "scripts": ["app/js/background.js"]
+      "scripts": ["js/background.js"]
     }
   },
   "icons": {
-    "16": "app/images/icons/icon_16.png",
-    "48": "app/images/icons/icon_48.png",
-    "128": "app/images/icons/icon_128.png"
+    "16": "images/icons/icon_16.png",
+    "48": "images/icons/icon_48.png",
+    "128": "images/icons/icon_128.png"
   }
 }
