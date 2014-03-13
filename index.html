@@ -89,12 +89,12 @@
           <div class="well" id="form-well">
             <form>
               <input id="password" placeholder="Enter your CarbonWallet 12 word passphrase." value="" class="input-medium" type="password" />
-              <input id="open-sesame" disabled data-toggle="collapse" data-target="#create-keys" class="btn" value="Open Wallet" />
+              <input id="open-sesame" disabled data-toggle="collapse" data-target="#create-keys" class="btn disabled" value="Open Wallet" />
               <input id="generate-password" class="btn btn-success" data-toggle="collapse" data-target="#create-wallet" value="Start a new wallet" />
             </form>
             <div id="create-keys" class="collapse">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" id="seed-progress" style="width: 0%;">Stretching Keys</div>
+                <div class="bar" id="seed-progress" style="width: 0%;"></div>
               </div>
             </div>
             <div id="create-wallet" class="collapse">
