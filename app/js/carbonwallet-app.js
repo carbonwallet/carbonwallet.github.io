@@ -58,7 +58,7 @@ $(document).ready(function() {
   $('#your-addresses-nav, #home').click(function(){
     hideAll();
     $('#your-addresses').show();
-    $('#your-addresses-nav').parent().addClass('currents');
+    $('#your-addresses-nav').parent().addClass('current');
     return false;
   });
 
