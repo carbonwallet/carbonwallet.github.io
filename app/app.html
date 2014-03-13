@@ -18,38 +18,52 @@
 
     <!-- The Login Page -->
     <div id="logon" class="all-wrapper no-menu-wrapper">
+              
       <div class="login-logo-w">
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
         <i class="icon-cloud-download"></i>
         <span>Carbon Wallet</span>
         </a>
       </div>
+                  
       <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-10 col-md-offset-1">
           <div class="content-wrapper bold-shadow">
             <div class="content-inner">
               <div class="main-content main-content-grey-gradient no-page-header">
                 <div class="main-content-inner">
-                  <form action="" role="form">
-                    <h3 class="form-title form-title-first"><i class="icon-lock"></i> Login Example</h3>
+                  <form>
+                    <h3 class="form-title form-title-first"><i class="icon-lock"></i> Login With Your Passphrase</h3>
                     <div class="form-group">
-                      <label>Username</label>
-                      <input type="email" class="form-control" placeholder="Enter email">
+                      <input id="password" placeholder="Enter your Carbon Wallet 12 word passphrase or click on 'Start a new wallet' if you are new user." value="" class="form-control" type="password" />
                     </div>
-                    <div class="form-group">
-                      <label>Password</label>
-                      <input type="password" class="form-control" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="checkbox">
-                        <label>
-                        <input type="checkbox"> Remember me
-                        </label>
-                      </div>
-                    </div>
-                    <a href="index.html" class="btn btn-primary btn-lg">Sign in</a>
-                    <a href="index.html" class="btn btn-link">Cancel</a>
+                    
+                    <input id="open-sesame" disabled data-toggle="collapse" data-target="#create-keys" class="btn btn-primary" value="Open Wallet" />
+                    <input id="generate-password" class="btn btn-success" data-toggle="collapse" data-target="#create-wallet" value="Start a new wallet" />
                   </form>
+                  <br />
+                  <div id="create-keys" class="collapse">
+                    <div class="progress">
+                      <div class="progress-bar" id="seed-progress" style="width: 0%;"></div>
+                    </div>
+                  </div>
+                  <div id="create-wallet" class="collapse">
+                    <h4>To use CarbonWallet you need a passphrase.</h4>
+                    <p>We have created a secure passphrase for you in the box below. Write 
+                      your passphrase down and keep it safe.
+                    </p>
+                    <p>
+                      <div class="input-group">
+                        <input id="generated" readonly value="" class="form-control" type="text" />
+                        <span id="regenerate-password" data-toggle="tooltip" title="Click to generate another random passphrase." class="input-group-addon"><i class="icon-repeat"></i></span>
+                      </div>
+                    </p>
+                    <p><em>
+                      Make sure no-one is near you when you use this passphrase. 
+                      If anyone sees your passphrase, or gets it from you, 
+                      they can steal your Bitcoins.
+                    </em></p>
+                  </div>
                 </div>
               </div>
             </div>

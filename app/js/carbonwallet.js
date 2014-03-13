@@ -136,15 +136,15 @@ $(document).ready(function() {
     var password = $('#password').val()
     var valid = true;
     
-    if(password.split(' ').length != 12)
+    if(password.split(' ').length != 12) 
       valid = false;
 
-      //make sure each word is a valid one from elctrum poetry list (mn_words variable)
-      password.split(' ').forEach(function (word) {
-          if (mn_words.indexOf(word) == -1) {
-              valid = false;
-          }
-      });
+    //make sure each word is a valid one from elctrum poetry list (mn_words variable)
+    password.split(' ').forEach(function (word) {
+        if (mn_words.indexOf(word) == -1) {
+            valid = false;
+        }
+    });
 
     if(valid)
     {
