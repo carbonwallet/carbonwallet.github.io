@@ -99,7 +99,7 @@
                 </li>
                 <li class="current">
                   <a href="#" id="your-addresses-nav">
-                  <i class="fa fa-bitcoin"></i> Your Addreses
+                  <i class="fa fa-bitcoin"></i> Received
                   </a>
                 </li>
                 <li>
@@ -207,50 +207,81 @@
                       
                       <form action="/" class="form-vertical" method="get">
                         <fieldset>
-                          <div class="control-group form-hide">
-                            <label class="control-label" for="txSec">Private Key</label> 
-                            <div class="controls"> 
-                              <input class="span5" id="txSec" type="text"> 
-                              <span class="help-inline errormsg"></span> 
+                          <input type="hidden" class="form-control" id="txSec" type="text"> 
+                          
+                          <div class="row">
+                            <div class="col-xs-7">
+                            <label for="txDropAddr">Source Address</label> 
+                            <select class="form-control" id="txDropAddr"> 
+                            </select>
+                            </div>
+
+                            <div class="col-xs-3">
+                            <label for="txBalance">Balance</label> 
+                            <div class="input-group">
+                              <input class="form-control" id="txBalance" readonly type="text"> 
+                              <span class="input-group-addon">BTC</span>
+                            </div>
                             </div>
                           </div>
-                          <div class="control-group">
-                            <label class="control-label" for="txDropAddr">Source Address</label> 
-                            <div class="controls">
-                              <select class="span4" id="txDropAddr"> 
-                              </select>
-                              <div class="input-prepend"> <span class="add-on">BTC</span><input class="span2" id="txBalance" readonly type="text"> 
-                              </div>
-                              <!--<button class="btn" id="txDropGetUnspent" title="Reload" type="button"><i class="fa fa-repeat"></i></button> 
-                                <button class="btn" data-target="#txUnspentForm" data-toggle="collapse" id="txToggle" type="button">Edit Inputs</button>-->
+                          
+                          <br />
+                          
+                          <div class="row">
+                            <div class="col-xs-7">
+                            <label for="txDest">Destination Address</label> 
+                            </div>
+
+                            <div class="col-xs-3">
+                            <div class="input-group">
+                            <label for="txValue">Amount</label> 
+                            </div>
                             </div>
                           </div>
-                          <div class="control-group txCC">
-                            <label class="control-label" for="txDest">Destination Address</label> 
-                            <div class="controls">
-                              <input id="txDest" class="span4 txDest" type="text" placeholder="E.g. 1BountYypWttTvAJcMJVvSRDfX3TJ182To" autocomplete="off"> 
-                              <div class="input-prepend"> 
-                                <span class="add-on">BTC</span>
-                                <input class="span2" id="txValue" placeholder="E.g. 0.01" type="text" autocomplete="off"> 
-                              </div>
-                              <span class="help-inline errormsg">
-                              <button class="btn input-up" style="margin-bottom: 10px" id="txAddDest" type="button">+</button> 
-                              <button class="btn input-up" style="margin-bottom: 10px" id="txRemoveDest" type="button" disabled>&ndash;</button> 
-                              </span> 
+                          
+                          <div class="row">
+                            <div class="col-xs-7">
+                            <input id="txDest" class="form-control" type="text" placeholder="E.g. 1BountYypWttTvAJcMJVvSRDfX3TJ182To" autocomplete="off"> 
+                            </div>
+
+                            <div class="col-xs-3">
+                            <div class="input-group">
+                              <input class="form-control" id="txValue" placeholder="E.g. 0.01" type="text" autocomplete="off"> 
+                              <span class="input-group-addon">BTC</span>
+                            </div>
+                            </div>
+
+                            <div class="col-xs-2">
+                            <span class="help-inline errormsg">
+                            <button class="btn input-up" style="margin-bottom: 10px" id="txAddDest" type="button">+</button> 
+                            <button class="btn input-up" style="margin-bottom: 10px" id="txRemoveDest" type="button" disabled>&ndash;</button> 
+                            </span> 
                             </div>
                           </div>
-                          <div class="control-group">
-                            <label class="control-label" for="txFee">Fee (Includes Miners Fee)</label> 
-                            <div class="controls">
-                              <div class="input-prepend"><span class="add-on">BTC</span><input readonly class="span2" id="txFee" type="text" value="0.0005"></div>
+
+                          <br />
+                          
+                          <div class="row">
+                          <div class="col-xs-4">
+                            <label for="txFee">Fee (Includes Miners Fee)</label> 
+                            <div class="input-group">
+                              <input readonly class="form-control" id="txFee" type="text" value="0.0005">
+                              <span class="input-group-addon">BTC</span>
                             </div>
                           </div>
+                          </div>
+
+                          <br />
+                          
+                          
                           <div class="control-group">
                             <label class="control-label" for="txFee">You can check the payment before it is sent to the network.</label> 
                             <div class="controls"> 
                               <button class="btn" disabled style="margin-bottom: 10px" id="txSend" type="button">Verify and Send</button>
                             </div>
                           </div>
+                          
+                          
                         </fieldset>
                       </form>
                     </div>
