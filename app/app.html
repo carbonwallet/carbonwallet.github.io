@@ -15,17 +15,14 @@
     <title>Carbon Wallet - Secure Deterministic Bitcoin Wallet</title>
   </head>
   <body>
-
     <!-- The Login Page -->
     <div id="logon" class="all-wrapper no-menu-wrapper">
-              
       <div class="login-logo-w">
         <a href="#" class="logo">
         <i class="fa fa-cloud-download"></i>
         <span>Carbon Wallet</span>
         </a>
       </div>
-                  
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div class="content-wrapper bold-shadow">
@@ -37,7 +34,6 @@
                     <div class="form-group">
                       <input id="password" placeholder="Enter your Carbon Wallet 12 word passphrase or click on 'Start a new wallet' if you are new user." value="" class="form-control" type="password" />
                     </div>
-                    
                     <input id="open-sesame" disabled data-toggle="collapse" data-target="#create-keys" class="btn btn-primary" value="Open Wallet" />
                     <input id="generate-password" class="btn btn-success" data-toggle="collapse" data-target="#create-wallet" value="Start a new wallet" />
                   </form>
@@ -62,7 +58,8 @@
                       Make sure no-one is near you when you use this passphrase. 
                       If anyone sees your passphrase, or gets it from you, 
                       they can steal your Bitcoins.
-                    </em></p>
+                      </em>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -71,8 +68,6 @@
         </div>
       </div>
     </div>
-
-
     <!-- The Main Page -->
     <div id="site" class="all-wrapper">
       <div class="row">
@@ -126,7 +121,66 @@
                 <li class="active">Addresses</li>
               </ol>
               <div class="main-content">
-
+                <!-- Start of dashboard -->
+                <div id="dashboard" class="widget">
+                  <h3 class="section-title first-title"><i class="fa fa-table"></i> Dashboard</h3>
+                  <div class="widget-content-white glossed">
+                    <div class="padded">
+                      <h3 class="section-title first-title"><i class="icon-tasks"></i> Statistics</h3>
+                      <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                          <div class="widget-content-blue-wrapper changed-up">
+                            <div class="widget-content-blue-inner padded">
+                              <div class="pre-value-block"><i class="icon-dashboard"></i> Total Visits</div>
+                              <div class="value-block">
+                                <div class="value-self">10,520</div>
+                                <div class="value-sub">This Week</div>
+                              </div>
+                              <span class="dynamicsparkline">Loading..</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                          <div class="widget-content-blue-wrapper changed-up">
+                            <div class="widget-content-blue-inner padded">
+                              <div class="pre-value-block"><i class="icon-user"></i> New Users</div>
+                              <div class="value-block">
+                                <div class="value-self">1,120</div>
+                                <div class="value-sub">This Month</div>
+                              </div>
+                              <span class="dynamicsparkline">Loading..</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 text-center hidden-md">
+                          <div class="widget-content-blue-wrapper changed-up">
+                            <div class="widget-content-blue-inner padded">
+                              <div class="pre-value-block"><i class="icon-signin"></i> Sold Items</div>
+                              <div class="value-block">
+                                <div class="value-self">275</div>
+                                <div class="value-sub">This Week</div>
+                              </div>
+                              <span class="dynamicsparkline">Loading..</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
+                          <div class="widget-content-blue-wrapper changed-up">
+                            <div class="widget-content-blue-inner padded">
+                              <div class="pre-value-block"><i class="icon-money"></i> Net Profit</div>
+                              <div class="value-block">
+                                <div class="value-self">$9,240</div>
+                                <div class="value-sub">Yesterday</div>
+                              </div>
+                              <span class="dynamicbars">Loading..</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End of create payment screen -->
                 <!-- Start of addresses screen -->
                 <div id="your-addresses" class="widget">
                   <h3 class="section-title first-title"><i class="fa fa-table"></i> Users Table</h3>
@@ -197,96 +251,78 @@
                   </div>
                 </div>
                 <!-- End of addresses screen -->
-
-
                 <!-- Start of create payment screen -->
                 <div id="tx" class="widget">
                   <h3 class="section-title first-title"><i class="fa fa-table"></i> Make a Payment</h3>
                   <div class="widget-content-white glossed">
                     <div class="padded">
-                      
                       <form action="/" class="form-vertical" method="get">
                         <fieldset>
                           <input type="hidden" class="form-control" id="txSec"> 
-                          
                           <div class="row">
                             <div class="col-xs-7">
-                            <label for="txDropAddr">Source Address</label> 
-                            <select class="form-control" id="txDropAddr"> 
-                            </select>
+                              <label for="txDropAddr">Source Address</label> 
+                              <select class="form-control" id="txDropAddr"> 
+                              </select>
                             </div>
-
                             <div class="col-xs-3">
-                            <label for="txBalance">Balance</label> 
-                            <div class="input-group">
-                              <input class="form-control" id="txBalance" readonly type="text"> 
-                              <span class="input-group-addon">BTC</span>
-                            </div>
+                              <label for="txBalance">Balance</label> 
+                              <div class="input-group">
+                                <input class="form-control" id="txBalance" readonly type="text"> 
+                                <span class="input-group-addon">BTC</span>
+                              </div>
                             </div>
                           </div>
-                          
                           <br />
-                          
                           <div class="row">
                             <div class="col-xs-7">
-                            <label for="txDest">Destination Address</label> 
+                              <label for="txDest">Destination Address</label> 
                             </div>
-
                             <div class="col-xs-3">
-                            <div class="input-group">
-                            <label for="txValue">Amount</label> 
-                            </div>
+                              <div class="input-group">
+                                <label for="txValue">Amount</label> 
+                              </div>
                             </div>
                           </div>
-                          
                           <div class="row txCC" style="padding-bottom: 10px">
                             <div class="col-xs-7">
-                            <input id="txDest" class="form-control" type="text" placeholder="E.g. 1BountYypWttTvAJcMJVvSRDfX3TJ182To" autocomplete="off"> 
+                              <input id="txDest" class="form-control" type="text" placeholder="E.g. 1BountYypWttTvAJcMJVvSRDfX3TJ182To" autocomplete="off"> 
                             </div>
-
                             <div class="col-xs-3">
-                            <div class="input-group">
-                              <input class="form-control" id="txValue" placeholder="E.g. 0.01" type="text" autocomplete="off"> 
-                              <span class="input-group-addon">BTC</span>
+                              <div class="input-group">
+                                <input class="form-control" id="txValue" placeholder="E.g. 0.01" type="text" autocomplete="off"> 
+                                <span class="input-group-addon">BTC</span>
+                              </div>
                             </div>
-                            </div>
-
                             <div class="col-xs-2">
-                            <span class="help-inline errormsg">
-                            <button class="btn input-up" style="margin-bottom: 10px" id="txAddDest" type="button">+</button> 
-                            <button class="btn input-up" style="margin-bottom: 10px" id="txRemoveDest" type="button" disabled>&ndash;</button> 
-                            </span> 
+                              <span class="help-inline errormsg">
+                              <button class="btn input-up" style="margin-bottom: 10px" id="txAddDest" type="button">+</button> 
+                              <button class="btn input-up" style="margin-bottom: 10px" id="txRemoveDest" type="button" disabled>&ndash;</button> 
+                              </span> 
                             </div>
                           </div>
-                          
                           <div class="row">
-                          <div class="col-xs-4">
-                            <label for="txFee">Fee (Includes Miners Fee)</label> 
-                            <div class="input-group">
-                              <input readonly class="form-control" id="txFee" type="text" value="0.0005">
-                              <span class="input-group-addon">BTC</span>
+                            <div class="col-xs-4">
+                              <label for="txFee">Fee (Includes Miners Fee)</label> 
+                              <div class="input-group">
+                                <input readonly class="form-control" id="txFee" type="text" value="0.0005">
+                                <span class="input-group-addon">BTC</span>
+                              </div>
                             </div>
                           </div>
-                          </div>
-
                           <br />
-                          
-                          
                           <div class="control-group">
                             <label class="control-label" for="txFee">You can check the payment before it is sent to the network.</label> 
                             <div class="controls"> 
                               <button class="btn btn-success" disabled style="margin-bottom: 10px" id="txSend" type="button">Verify and Send</button>
                             </div>
                           </div>
-                          
-                          
                         </fieldset>
                       </form>
                     </div>
                   </div>
                 </div>
                 <!-- End of create payment screen -->
-
                 <div id="verifyModal" class="modal">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -315,7 +351,7 @@
                         </table>
                         <p id="tx-toggle" >
                           <a data-toggle="collapse" 
-                          data-target="#advanced-details">Show/Hide Transaction Details (Advanced users)</a>
+                            data-target="#advanced-details">Show/Hide Transaction Details (Advanced users)</a>
                         </p>
                         <div id="advanced-details" class="collapse">
                           <div class="control-group">
@@ -339,7 +375,6 @@
                     </div>
                   </div>
                 </div>
-
                 <div id="alertModal" class="modal">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -356,14 +391,12 @@
                     </div>
                   </div>
                 </div>
-                  
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
     <!-- The following libraries are required for bitcon addresses and signing. -->
     <script src="extjs/bitcoin/crypto.js"></script> 
     <script src="extjs/bitcoin/sha256.js"></script> 
@@ -383,17 +416,13 @@
     <script src="extjs/bitcoin/opcode.js"></script> 
     <script src="extjs/bitcoin/script.js"></script> 
     <script src="extjs/bitcoin/transaction.js"></script> 
-
-    
     <!-- JQuery and bootstrap. -->
     <script src="extjs/jquery-1.9.1.js"></script> 
     <script src="extjs/bootstrap.js"></script> 
-    
     <!-- Other external libraries. -->
     <script src="extjs/qrcode.js"></script> 
     <script src="extjs/mnemonic.js"></script> 
     <script src="extjs/electrum.js"></script> 
-    
     <!-- JavaScript created specifically for CarbonWallet. -->
     <script src="js/tx.js"></script> 
     <script src="js/blockchain.js"></script> 

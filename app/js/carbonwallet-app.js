@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   $('#site').hide();
   $('#tx').hide();
+  $('#dashboard').hide();
   $('#logout-menu').hide();
   
   // Add instawallet style URLS. Only we use a hash 
@@ -69,6 +70,13 @@ $(document).ready(function() {
     return false;
   });
 
+  $('#your-dashboard-nav').click(function(){
+    hideAll();
+    $('#dashboard').show();
+    $('#your-dashboard-nav').parent().addClass('current');
+    return false;
+  });
+
   $('#logout').click(function(){
     $('#password').val('');
     $('#site').hide();
@@ -99,6 +107,7 @@ $(document).ready(function() {
     $('ul.side-menu li').removeClass('current');
     $('#your-addresses').hide();
     $('#tx').hide();
+    $('#dashboard').hide();
   }
   
   function login_success() 
