@@ -11,6 +11,15 @@ var WALLET = new function ()
     return this.keys;
   };
   
+  this.getBalance = function() {
+
+    balance = 0
+		for(i = 0; i < 10; i++) {
+      balance = balance + parseFloat($('#balance' + i).text()); 
+    }
+    return balance;
+  }
+  
   this.updateAllBalances = function() {
     
     var addresses = [];

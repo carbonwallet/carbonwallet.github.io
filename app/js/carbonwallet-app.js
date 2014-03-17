@@ -5,7 +5,7 @@ $(document).ready(function() {
 
   $('#site').hide();
   $('#tx').hide();
-  $('#dashboard').hide();
+  $('#your-addresses').hide();
   $('#logout-menu').hide();
   
   // Add instawallet style URLS. Only we use a hash 
