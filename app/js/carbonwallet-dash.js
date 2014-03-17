@@ -1,8 +1,12 @@
 $(document).ready(function() {
   setInterval(updateDashboard, (10 * 1000));
+  setInterval(updateBalances, (600 * 1000));
   
   function updateDashboard() {
     
+    if (! WALLET.isReady())
+      return;
+      
     $.ajax({
         url: "https://blockchain.info/q/24hrprice?cors=true",
         type: "GET",
@@ -19,6 +23,26 @@ $(document).ready(function() {
             $('#dollar-balance').text('$' + balance.toFixed(2));
         }
     });
+    
+  }
+  
+  function updateBalances() {
+
+    
+    if (! WALLET.isReady())
+      return;
+      
+    WALLET.updateAllBalances();
+    $("#txDropAddr").find("option").remove();
+    
+    for(i = 0; i < WALLET.getKeys().length; i++)
+    {
+      var addr = WALLET.getKeys()[i].getBitcoinAddress().toString();
+      $('#address' + i).text(addr); 
+      $("#txDropAddr").append('<option value=' + i + '>' + addr + '</option>'); 
+      var qrcode = makeQRCode(addr);
+      $('#qrcode' + i).popover({ title: 'QRCode', html: true, content: qrcode, placement: 'bottom' });
+    }
     
   }
   

@@ -20,6 +20,10 @@ var WALLET = new function ()
     return balance;
   }
   
+  this.isReady = function() {
+    return this.keys.length != 0;
+  }
+  
   this.updateAllBalances = function() {
     
     var addresses = [];
