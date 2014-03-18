@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   $('#site').hide();
   $('#tx').hide();
+  $('#decrypt-url').hide();
   $('#your-addresses').hide();
   $('#logout-menu').hide();
   
@@ -85,6 +86,19 @@ $(document).ready(function() {
     $('#logout-menu').hide();
     checkValidPassword();
     $('#logon').show();
+    return false;
+  });
+
+  $('#passphrase').click(function() {
+    $('#linkModalText').text($('#password').val());
+    $('#linkModal').modal();
+    return false;
+  });
+
+  $('#gen-link').click(function() {
+    var pass = $('#link-password').val();
+    var key = GibberishAES.enc("secret", "password")
+    $('#link-text').text('http://carbonwallet.com/#' + key);
     return false;
   });
 

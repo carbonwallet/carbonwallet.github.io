@@ -68,6 +68,35 @@
         </div>
       </div>
     </div>
+    <!-- The Decrypt URL Page -->
+    <div id="decrypt-url" class="all-wrapper no-menu-wrapper">
+      <div class="login-logo-w">
+        <a href="#" class="logo">
+        <i class="fa fa-cloud-download"></i>
+        <span>Carbon Wallet</span>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="content-wrapper bold-shadow">
+            <div class="content-inner">
+              <div class="main-content main-content-grey-gradient no-page-header">
+                <div class="main-content-inner">
+                  <form>
+                    <h3 class="form-title form-title-first"><i class="fa fa-lock"></i> Decrypt Your Wallet Passphrase</h3>
+                    <div class="form-group">
+                      <input id="password" placeholder="Enter your Carbon Wallet 12 word passphrase or click on 'Start a new wallet' if you are new user." value="" class="form-control" type="password" />
+                    </div>
+                    <input id="open-sesame" disabled data-toggle="collapse" data-target="#create-keys" class="btn btn-primary" value="Open Wallet" />
+                    <input id="generate-password" class="btn btn-success" data-toggle="collapse" data-target="#create-wallet" value="Start a new wallet" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- The Main Page -->
     <div id="site" class="all-wrapper">
       <div class="row">
@@ -112,6 +141,7 @@
             <div class="content-inner">
               <div class="page-header">
                 <div class="header-links hidden-xs">
+                  <a href="#" id="passphrase"><i class="fa fa-sign-out"></i> Passphrase</a>
                   <a href="#" id="logout"><i class="fa fa-sign-out"></i> Logout</a>
                 </div>
                 <h1><i class="fa fa-bar-chart"></i> Your Addresses</h1>
@@ -360,6 +390,7 @@
                     </div>
                   </div>
                 </div>
+                
                 <div id="alertModal" class="modal">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -376,6 +407,30 @@
                     </div>
                   </div>
                 </div>
+                
+                <div id="linkModal" class="modal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3>Your Passphrase</h3>
+                      </div>
+                      <div class="modal-body">
+                        <p><span id="linkModalText" class="alert alert-info"></span></p>
+                        <p>To create an encrypted web link, enter a password below.</p>
+                        <div class="form-group">
+                          <input class="form-control" id="link-password" type="password" value="">
+                          <button id="gen-link" type="button" class="btn btn-success">Generate Link</button>
+                          <textarea class="form-control" id="link-text"></textarea>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" data-dismiss="modal" class="btn">Close</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -408,6 +463,7 @@
     <script src="extjs/qrcode.js"></script> 
     <script src="extjs/mnemonic.js"></script> 
     <script src="extjs/electrum.js"></script> 
+    <script src="extjs/gibberish-aes-1.0.0.js"></script> 
     <!-- JavaScript created specifically for CarbonWallet. -->
     <script src="js/tx.js"></script> 
     <script src="js/blockchain.js"></script> 
