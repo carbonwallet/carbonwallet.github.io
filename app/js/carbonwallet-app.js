@@ -15,9 +15,24 @@ $(document).ready(function() {
   var hash = $(location).attr('href').split('#')[1];
   if(hash != '' && hash != undefined)
   {
-    $('#password').val(hash.replace(/-/g, ' '));
-    checkValidPassword();
+    $('#logon').hide();
+    $('#decrypt-url').show();
   }
+  
+  $('#open-with-password').click(function(){
+    var pass = $('#enc-password').val();
+    var hash = $(location).attr('href').split('#')[1];
+    
+    try {
+      var dec = GibberishAES.dec(hash, pass);
+      $('#password').val(dec);
+      $('#decrypt-url').hide();
+      $('#logon').show();
+      checkValidPassword();
+    } catch(err) {
+      alert(err);
+    }
+  })
   
   $('#open-sesame').click(function(){
   
@@ -96,8 +111,9 @@ $(document).ready(function() {
   });
 
   $('#gen-link').click(function() {
+    var passphrase = $('#password').val();
     var pass = $('#link-password').val();
-    var key = GibberishAES.enc("secret", "password")
+    var key = GibberishAES.enc(passphrase, pass)
     $('#link-text').text('http://carbonwallet.com/#' + key);
     return false;
   });
