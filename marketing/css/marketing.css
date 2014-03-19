@@ -25,17 +25,11 @@ footer {
 	margin: 50px 0;
 }
 
-.business-header1 {
-  border-top: 1px solid #ddd;
-  overflow: hidden;
-  opacity: 0;
-  margin: 0 0 90px;
-  padding: 0;
-  position: relative;
-  white-space: nowrap;
+.business-header {
   width: 100%;
-  z-index: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  height: 100%;
+  background: url('../images/steel-tile.jpg') repeat;
+  z-index: -3;
 }
 .business-header video {
   display: block;
@@ -52,6 +46,4 @@ footer {
 
 #wooden-seperator {
   height: 100px;
-  margin-top: -90px;
-  background: url('../images/steel-tile.jpg') repeat;
 }
