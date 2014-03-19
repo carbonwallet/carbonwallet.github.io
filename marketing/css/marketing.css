@@ -1,0 +1,57 @@
+.navbar {
+background-color: rgba(255,255,255,0.4); // I don't know the .well color, so I used white as example
+}
+
+/* change the URL to a picture of your choice - the higher quality the better! */
+.business-header {
+	background-size: cover;
+  position: relative;
+}
+
+.business-header h3 {
+  margin-bottom: 60px;
+	text-shadow: 0 0 5px #000;
+	color: #fff;
+}
+
+/* adjust the color and text shadow to optimize legibility once you have an image set - you can also change the vertical positioning if desired  */
+.tagline {
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+  margin-top: 100px;
+}
+
+footer {
+	margin: 50px 0;
+}
+
+.business-header1 {
+  border-top: 1px solid #ddd;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0 0 90px;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.business-header video {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+}
+.business-header2 img {
+  display: block;
+  width: 100%;
+}
+
+#wooden-seperator {
+  height: 100px;
+  margin-top: -90px;
+  background: url('../images/steel-tile.jpg') repeat;
+}

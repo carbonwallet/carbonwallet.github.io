@@ -13,7 +13,8 @@
     <link href="app/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS for the 'Business Frontpage' Template -->
-    <link href="app/css/marketing.css" rel="stylesheet">
+    <link href="marketing/css/marketing.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -46,15 +47,14 @@
         <!-- /.container -->
     </nav>
 
-    <div class="business-header">
+    <div id="back-video" class="business-header">
 
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <!-- The background image is set in the custom CSS -->
-                    <h1 class="tagline">Cryptographic cold storage for your Bitcoins.</h1>
-                    <h3>CarbonWallet is an online and offline deterministic wallet. </h3>
+                    <h1 class="tagline">If you can look after a 12 word passphrase.</h1>
+                    <h3>Then Carbon Wallet can secure your Bitcoins permanently. </h3>
                 </div>
             </div>
 
@@ -68,25 +68,31 @@
             </div>
         </div>
 
+    		<video autoplay loop="loop">
+			    <source src="marketing/video/fondo.mp4" type="video/mp4" />
+			    <source src="http://usertify.com/videos/fondo.ogg" type="video/ogg" />
+			    <source src="http://usertify.com/videos/fondo.webm" type="video/webm" />
+    		</video>
+        
     </div>
+    
+    <div id="wooden-seperator">
+    </div>
+    
+    <hr />
 
     <div class="container">
 
-        <hr>
-
         <div class="row">
-
-            <div class="row">
-                <div class="col-lg-4 col-sm-4">
-                  <h2>Install Now</h2>
-                  <p>Or use it online</p>
-                  <p>When using this template, two decisions will be open to visitors. Decision one will be to use above-the-fold information to interact with the page. Decision two will be to scroll down and see the additional marketing boxes. Either way, the user will get the information they need!</p>
-                  <p><a class="btn btn-default btn-large" href="#">Call to action &raquo;</a>
-                  </p>
-                </div>
-                <div class="col-lg-8 col-sm-8">
-                    <img src="app/images/marketing/addresses-screenshot.png" class="img-responsive">
-                </div>
+            <div class="col-lg-4 col-sm-4">
+              <h2>Install Now</h2>
+              <p>Or use it online</p>
+              <p>When using this template, two decisions will be open to visitors. Decision one will be to use above-the-fold information to interact with the page. Decision two will be to scroll down and see the additional marketing boxes. Either way, the user will get the information they need!</p>
+              <p><a class="btn btn-default btn-large" href="#">Call to action &raquo;</a>
+              </p>
+            </div>
+            <div class="col-lg-8 col-sm-8">
+                <img src="app/images/marketing/addresses-screenshot.png" class="img-responsive">
             </div>
         </div>
 
@@ -163,8 +169,9 @@
 
 
     <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="app/extjs/jquery-1.9.1.js"></script>
+    <script src="app/extjs/bootstrap.js"></script>
+    <script src="marketing/js/main.js"></script> 
 
 </body>
 
