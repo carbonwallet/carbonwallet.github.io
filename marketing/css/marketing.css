@@ -1,5 +1,4 @@
-.navbar {
-background-color: rgba(255,255,255,0.4); // I don't know the .well color, so I used white as example
+body {
 }
 
 /* change the URL to a picture of your choice - the higher quality the better! */
@@ -30,6 +29,7 @@ footer {
   height: 100%;
   background: url('../images/steel-tile.jpg') repeat;
   z-index: -3;
+  color: white;
 }
 .business-header video {
   display: block;
@@ -46,4 +46,62 @@ footer {
 
 #wooden-seperator {
   height: 100px;
+}
+
+[class^="btn-"] {
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4), inset 0px 1px rgba(255, 255, 255, 0.2);
+  padding: 14px 20px;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color ease .2s, box-shadow ease .2s;
+  -moz-transition: background-color ease .2s, box-shadow ease .2s;
+  transition: background-color ease .2s, box-shadow ease .2s;
+}
+
+#links li {
+  list-style-type: none;
+}
+
+.btn-main {
+  background-color: #e74c3c;
+}
+.btn-main:hover {
+  background-color: #d62c1a;
+}
+.btn-main:active {
+  background-color: #a82315;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0), inset 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+body.mac .dl-win,
+body.mac .dl-lin-32,
+body.mac .dl-lin-64,
+body.win .dl-mac,
+body.win .dl-lin-32,
+body.win .dl-lin-64,
+body.lin-32 .dl-mac,
+body.lin-64 .dl-mac,
+body.lin-32 .dl-win,
+body.lin-64 .dl-win,
+body.nope .dl-win,
+body.nope .dl-mac {
+  display: none !important;
+}
+
+body .dl-win, body .dl-lin-32, body .dl-lin-64 {
+  display: none !important;
+}
+
+body.win .dl-win {
+  display: inline-block !important;
+}
+
+body.lin-32 .dl-lin-32,
+body.lin-64 .dl-lin-64 {
+  display: inline-block !important;
 }
