@@ -1,6 +1,15 @@
 body {
 }
 
+.blow-up {
+  font-size: 6em;
+}
+
+.section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 /* change the URL to a picture of your choice - the higher quality the better! */
 .business-header {
 	background-size: cover;
