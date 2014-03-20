@@ -153,19 +153,37 @@
 
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-circle img-responsive text-center" src="http://placehold.it/300x300">
-                <h2>We are using 128bit passphrases.</h2>
-                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+                <div class="text-center blow-up"><i class="fa fa-key"></i></div>
+                <h4>We are using 128bit passphrases.</h2>
+                <p>According to "<a href="http://www.grc.com/haystack.htm">how big is your haystack?</a>" Our passphrases would take 
+                <em>trillions of 
+                 centuries</em> to break under a massive cracking scenario. </p>
+                <p>We are using 
+                <a href="https://developer.mozilla.org/en/docs/DOM/window.crypto.getRandomValues">
+                window.crypto.getRandomValues</a> whenever available for cryptographically random values.</p>
+                <p>Our passphrases are compatible with the 
+                <a href="http://electrum.org/">Electrum Bitcoin client</a>
+                and <a href="http://brainwallet.org/#chains">Brainwallet.org</a>.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive" src="http://placehold.it/300x300">
-                <h2>We generate bitcoin addresses deterministically.</h2>
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                <div class="text-center blow-up"><i class="fa fa-gears"></i></div>
+                <h4>We generate bitcoin addresses deterministically.</h2>
+                <p>
+                  Your passphrase is turned into a 128bit key which is then stretched into 10 bitcoin addresses. 
+                  There is no limit but for now 10 per passphrase should be adequate.</p>
+                
+                <p>Determined Bitcoin addresses mean no need for a remote server to hold keys and no need
+                to store keys on a local hard drive.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-circle img-responsive" src="http://placehold.it/300x300">
-                <h2>CarbonWallet is open and public domain.</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+                <div class="text-center blow-up"><i class="fa fa-github"></i></div>
+                <h4>CarbonWallet is open and public domain.</h2>
+                <p>
+                All source code is available on Github and the site is a Github page. </p>
+                <p>All commits and changes are open for peer review and the site is deployed 
+                directly from the repository.</p>
+                <p><strong>Extra security through open source code.</strong></p>
+                <p>All JavaScript is unminimized for easier inspection.</p>
             </div>
         </div>
 
