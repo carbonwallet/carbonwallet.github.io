@@ -31,6 +31,7 @@ without having to go through the Chrome Web store:
 Build carbonwallet on windows, mac and linux
 
 - npm install grunt-node-webkit-builder --save-dev
+- npm install grunt-contrib-compress --save-dev
 - npm install -g grunt-cli
 - grunt
 
