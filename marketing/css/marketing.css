@@ -98,8 +98,12 @@ footer {
   transition: background-color ease .2s, box-shadow ease .2s;
 }
 
-#links li {
+.links {
+  padding-left: 0;
+}
+.links li {
   list-style-type: none;
+  padding-left: 0;
 }
 
 .btn-main {
