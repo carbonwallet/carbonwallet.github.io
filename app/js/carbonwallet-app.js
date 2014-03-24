@@ -25,7 +25,7 @@ $(document).ready(function() {
     
     try {
       var dec = GibberishAES.dec(hash, pass);
-      $('#password').val(dec);
+      $('#password').val(mn_encode(dec));
       $('#decrypt-url').hide();
       $('#logon').show();
       checkValidPassword();
@@ -112,9 +112,12 @@ $(document).ready(function() {
 
   $('#gen-link').click(function() {
     var passphrase = $('#password').val();
+    
+    // Convert it to hex as it's smaller.
+    var dec = mn_decode(passphrase);
     var pass = $('#link-password').val();
-    var key = GibberishAES.enc(passphrase, pass)
-    $('#link-text').text('http://carbonwallet.com/#' + key);
+    var key = GibberishAES.enc(dec, pass)
+    $('#link-text').text('http://carbonwallet.com/app.html#' + key);
     return false;
   });
 
