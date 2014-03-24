@@ -24,6 +24,7 @@ $(document).ready(function() {
     var hash = $(location).attr('href').split('#')[1];
     
     try {
+      GibberishAES.size(128);
       var dec = GibberishAES.dec(hash, pass);
       $('#password').val(mn_encode(dec));
       $('#decrypt-url').hide();
@@ -116,6 +117,7 @@ $(document).ready(function() {
     // Convert it to hex as it's smaller.
     var dec = mn_decode(passphrase);
     var pass = $('#link-password').val();
+    GibberishAES.size(128);
     var key = GibberishAES.enc(dec, pass)
     $('#link-text').text('http://carbonwallet.com/app.html#' + key);
     return false;
