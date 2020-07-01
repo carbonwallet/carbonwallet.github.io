@@ -46,6 +46,7 @@ $(document).ready(function() {
       function(privKey) {
         Electrum.gen(10, function(r) { 
           WALLET.getKeys().push(new Bitcoin.ECKey(r[1])); 
+          console.log(r[1])
           if(WALLET.getKeys().length == 10)
             login_success(); 
         });
